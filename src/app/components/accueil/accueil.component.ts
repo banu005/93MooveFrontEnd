@@ -13,7 +13,7 @@ import {MatAnchor, MatButton} from '@angular/material/button';
 import {RouterLink} from '@angular/router';
 import {MatInput} from '@angular/material/input';
 import {CoursService} from '../../services/cours.service';
-import {Tatoueur} from '../../models/user.model';
+import {User} from '../../models/user.model';
 import {UserService} from '../../services/user.service';
 import {Cours} from '../../models/cours.model';
 import {

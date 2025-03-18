@@ -17,8 +17,8 @@ export class UserService {
 // //Depuis l'url de l'API.
 
   getUser(): Observable<User[]> {
-    let user = this.http.get<User[]>(this.apiUrl);
-    return user;
+    let users = this.http.get<User[]>(this.apiUrl);
+    return users;
   }
 
   addUser(user: User): Observable<any> {

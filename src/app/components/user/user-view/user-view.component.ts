@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {UserService} from '../../../services/user.service';
-import {Tatoueur} from '../../../models/user.model';
+import {User} from '../../../models/user.model';
 @Component({
   selector: 'app-tatoueur-view',
   standalone: true,
@@ -10,15 +10,15 @@ import {Tatoueur} from '../../../models/user.model';
   styleUrl: './user-view.component.css'
 })
 export class UserViewComponent {
-  tatoueur!: Tatoueur;
+  user!: User;
 
-  constructor(private tatoueurService: UserService, private route: ActivatedRoute) {
+  constructor(private userService: UserService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     let id = this.route.snapshot.params['tatoueurId'];
-    this.tatoueurService.findById(id).subscribe((data: Tatoueur) => {
-      this.tatoueur = data;
+    this.userService.findById(id).subscribe((data: User) => {
+      this.user = data;
     });
   }
 }
