@@ -21,7 +21,7 @@ export class UserService {
     return user;
   }
 
-  addUser(tatoueur: User): Observable<any> {
+  addUser(user: User): Observable<any> {
     return this.http.post(this.apiUrl, JSON.stringify(user), {headers: this.auth.headers});
   }
 
@@ -29,8 +29,8 @@ export class UserService {
     return this.http.get(this.apiUrl + '/' + id)
   }
 
-  update(id: number, tatoueur: User): Observable<any> {
-    return this.http.put(this.apiUrl + '/' + id, JSON.stringify(this.user), {headers: this.auth.headers})
+  update(id: number, user: User): Observable<any> {
+    return this.http.put(this.apiUrl + '/' + id, JSON.stringify(user), {headers: this.auth.headers})
   }
 
   delete(id: number) {
