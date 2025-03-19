@@ -44,7 +44,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class UserComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de tatoueurs
   user: User[] = [];
-  displayedColumns: string[] = ['nom', 'style', 'action'];
+  displayedColumns: string[] = ['username', 'email', 'password', 'quotientfamilial', 'salaire', 'action'];
 
   constructor(private userService: UserService,private auth: AuthService,) {
   }

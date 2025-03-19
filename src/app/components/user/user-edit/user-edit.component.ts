@@ -26,8 +26,11 @@ export class UserEditComponent {
     this.userService.findById(this.id).subscribe((data: User)=>{
       this.user = data;
       this.form = new FormGroup({
-        nom: new FormControl(this.user.nom, [Validators.required]),
-        style: new FormControl(this.user.style, Validators.required)
+        username: new FormControl(this.user.username, [Validators.required]),
+        email: new FormControl(this.user.email, Validators.required),
+        password: new FormControl(this.user.password, Validators.required),
+        quotientfamilial: new FormControl(this.user.quotientfamilial, Validators.required),
+        salaire: new FormControl(this.user.salaire, Validators.required),
       });
     });
   }
