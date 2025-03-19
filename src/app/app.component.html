@@ -11,22 +11,25 @@
       </mat-list-item>
       <mat-list-item>
         <a routerLink="/login">
+          <div [hidden]="authenticated()">
           <mat-icon>login</mat-icon>
           <span>Login</span>
+          </div>
         </a>
+        <div [hidden]="!authenticated()">
+          <button mat-button (click)="logout()">
+            Se déconnecter
+          </button>
+        </div>
       </mat-list-item>
-      <mat-list-item>
 
-
-      </mat-list-item>
-      <div [hidden]="!authenticated()">
       <mat-list-item>
         <a routerLink="/profil">
           <mat-icon>Mon profil</mat-icon>
           <span>Profil</span>
         </a>
       </mat-list-item>
-      </div>
+
       <!--
       <div [hidden]="!authenticated()">
       <mat-list-item>
@@ -41,13 +44,7 @@
   </mat-sidenav>
 
 
-    <div [hidden]="!authenticated()">
-      <p>Vous êtes connecté.e</p>
-    <button mat-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Se déconnecter
-    </button>
-    </div>
+
 
   <footer>
     <p>BTS SIO - Lycée Auguste Blanqui</p>
