@@ -91,4 +91,10 @@ export class AccueilComponent implements OnInit{
       this.cours = this.cours.filter(item => item.id !== id);
     })
   }
+
+  // addCours(id: number) {
+  //   this.coursService.addCours(cours).subscribe(res => {
+  //     this.cours = this.cours.filter(item => item.id !== id);
+  //   })
+  // }
 }
