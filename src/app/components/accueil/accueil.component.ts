@@ -86,6 +86,9 @@ export class AccueilComponent implements OnInit{
     });
   }
 
-
-
+  deleteCours(id: number) {
+    this.coursService.delete(id).subscribe(res => {
+      this.cours = this.cours.filter(item => item.id !== id);
+    })
+  }
 }

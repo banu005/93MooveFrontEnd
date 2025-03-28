@@ -8,6 +8,7 @@ import {AccueilComponent} from './components/accueil/accueil.component';
 import {ProfilComponent} from './components/profil/profil.component';
 import {CoursViewComponent} from './components/accueil/cours-view/cours-view.component';
 import {InscriptionsComponent} from './components/inscription/inscriptions.component';
+import {CoursEditComponent} from './components/accueil/cours-edit/cours-edit.component';
 
 export const routes: Routes = [
   { path: '', component: AccueilComponent },
@@ -19,6 +20,14 @@ export const routes: Routes = [
   {
     path: 'cours/:coursId/view',
     component: CoursViewComponent
+  },
+  {
+    path: 'cours/:coursId/edit',
+    component: CoursEditComponent
+  },
+  {
+    path: 'cours/create',
+    component: CoursEditComponent
   },
   {
     path: 'user/:userId/view',

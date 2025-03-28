@@ -1,6 +1,9 @@
 mat-sidenav-container {
   height:100%;
 }
+/*mat-nav-list{*/
+/*  right : 10%*/
+/*}*/
 footer {
   position: absolute;
   bottom: 0;
@@ -10,12 +13,12 @@ footer {
   background-color: #0078d7;
   color: white;
 }
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #0078d7;
+  background-color: deepskyblue;
   color: white;
 }
 

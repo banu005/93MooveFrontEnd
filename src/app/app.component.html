@@ -1,6 +1,13 @@
-<mat-toolbar> <div class="header"><img src="/93moove.png" alt="93Moove Logo" class="logo" /></div>
-</mat-toolbar>
+
+<!--<mat-toolbar>-->
+<!--&lt;!&ndash;  <div class="header">&ndash;&gt;-->
+<header>
+  <img src="/93moove.png" alt="93Moove Logo" class="logo" width="1302" height="260"/>
+</header>
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</mat-toolbar>-->
 <mat-sidenav-container>
+<!--  <img src="/93moove.png" alt="93Moove Logo" class="logo" width="800" height="260"/>-->
   <mat-sidenav [opened]="true" mode="side">
     <mat-nav-list>
       <mat-list-item>
@@ -24,11 +31,14 @@
       </mat-list-item>
 
       <mat-list-item>
+        <div [hidden]="!authenticated()">
         <a routerLink="/profil">
-          <mat-icon>Mon profil</mat-icon>
-          <span>Profil</span>
+<!--          <mat-icon>Profil</mat-icon>-->
+          <span>Mon Profil</span>
         </a>
+        </div>
       </mat-list-item>
+
 
       <!--
       <div [hidden]="!authenticated()">

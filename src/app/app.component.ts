@@ -7,10 +7,11 @@ import {MatListItem, MatNavList} from '@angular/material/list';
 import {MatIcon} from '@angular/material/icon';
 import {HttpClient} from '@angular/common/http';
 import {AuthService} from './services/auth.service';
+import {MatAnchor} from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbar, MatSidenavContainer, MatNavList, MatSidenav, MatListItem, MatIcon, RouterLink],
+    imports: [RouterOutlet, MatToolbar, MatSidenavContainer, MatNavList, MatSidenav, MatListItem, MatIcon, RouterLink, MatAnchor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

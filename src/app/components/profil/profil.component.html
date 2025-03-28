@@ -1,12 +1,12 @@
 <nav class="nav">
   <a mat-button routerLink="/profil">Mon profil</a>
   <a mat-button routerLink="/mesinscriptions">Mes inscriptions</a>
-  <a mat-raised-button color="primary" href="http://localhost:4200" class="login-btn">Se deconnecter</a>
+  <a mat-raised-button color="primary" href="http://localhost:4200/profil" class="login-btn">Se déconnecter</a>
 </nav>
 
 
 
-  <h3>Profil</h3>
+  <h3>Mon profil</h3>
 <!--  <mat-form-field appearance="outline" >-->
 <!--    <mat-label>Nom</mat-label>-->
 <!--    <input matInput type="text" formControlName="username">-->
@@ -17,6 +17,11 @@
 <!--/2e parti-->
 <div class="profile-form">
   <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+    <section>
+      <label for="avatar">Photo de Profil :</label>
+      <input type="file" id="avatar" (change)="onFileSelected($event)" />
+    </section>
+
 
     <section>
     <label for="name">Nom :</label>
@@ -35,7 +40,6 @@
     </section>
 
 
-
     <section>
     <label for="email">Email :</label>
     <input type="email" id="email" [(ngModel)]="user.email" name="email" required />
@@ -47,8 +51,8 @@
     </section>
 
     <section>
-    <label for="avatar">Photo de Profil :</label>
-    <input type="file" id="avatar" (change)="onFileSelected($event)" />
+      <label for="pdf">Quotient familial :</label>
+      <input type="file" id="pdf" (change)="onFileSelected($event)" />
     </section>
 
 <!--    <section>-->
@@ -56,10 +60,10 @@
 <!--    </section>-->
 
 
-    <section>
-      <a mat-raised-button href="" target="_blank">quotient familial</a>
+<!--    <section>-->
+<!--      <a mat-raised-button href="" target="_blank">quotient familial</a>-->
 
-    </section>
+<!--    </section>-->
 
     <section> <a mat-raised-button href="" target="_blank">Modifier mon profil</a></section>
   </form>
