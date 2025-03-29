@@ -5,12 +5,12 @@ mat-sidenav-container {
 /*  right : 10%*/
 /*}*/
 footer {
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;*/
+  /*bottom: 0;*/
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: #0078d7;
+  background-color: deepskyblue;
   color: white;
 }
 header {
