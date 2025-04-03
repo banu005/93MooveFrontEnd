@@ -12,6 +12,7 @@ import {Cours} from '../models/cours.model';
 export class CoursService {
   private apiUrl = 'http://localhost:8080/cours'; // 确保此 URL 指向后端的课程数据端点
 
+  //on récupère le service d’authentification dans le constructeur.
   constructor(private http: HttpClient, private auth: AuthService) {}
 
 

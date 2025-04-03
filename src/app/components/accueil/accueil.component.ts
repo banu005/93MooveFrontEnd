@@ -80,6 +80,7 @@ export class AccueilComponent implements OnInit{
     const filterValue = value.toLowerCase();
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
+  // S’exécute après qu’Angular aie initialité le component.
   ngOnInit():void{
     this.coursService.getCours().subscribe((data:Cours[])=> {
       this.cours = data;

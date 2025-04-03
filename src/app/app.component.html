@@ -1,4 +1,4 @@
-
+<!--mat-toolbar : pour créer une barre en haut de notre page web.-->
 <!--<mat-toolbar>-->
 <!--&lt;!&ndash;  <div class="header">&ndash;&gt;-->
 <header>
@@ -6,6 +6,7 @@
 </header>
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
 <!--</mat-toolbar>-->
+<!--mat-sidenav : pour créer un menu à gauche.-->
 <mat-sidenav-container>
 <!--  <img src="/93moove.png" alt="93Moove Logo" class="logo" width="800" height="260"/>-->
   <mat-sidenav [opened]="true" mode="side">
@@ -19,6 +20,7 @@
       <mat-list-item>
         <a routerLink="/login">
           <div [hidden]="authenticated()">
+            <!--mat-icon : crée les petites images du menu.-->
           <mat-icon>login</mat-icon>
           <span>Login</span>
           </div>

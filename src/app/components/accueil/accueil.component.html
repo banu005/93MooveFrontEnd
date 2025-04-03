@@ -59,6 +59,7 @@
         <th mat-header-cell *matHeaderCellDef> Description </th>
         <td mat-cell *matCellDef="let cours"> {{ cours.description }} </td>
       </ng-container>
+      <!--affiche donc uniquement si l’user est connecté-->
       <ng-container *ngIf="authenticated()" matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let cours">
